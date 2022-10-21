@@ -179,7 +179,7 @@ QCheckBox {
 }
 
 QCheckBox:focus {
-  border: none;
+  border: 1px solid #dc00fa;
 }
 
 QCheckBox QWidget:disabled {
@@ -311,7 +311,7 @@ QRadioButton {
 }
 
 QRadioButton:focus {
-  border: none;
+  border: 1px solid #dc00fa;
 }
 
 QRadioButton:disabled {
@@ -385,7 +385,7 @@ QMenuBar {
 }
 
 QMenuBar:focus {
-  border: 1px solid #8ab6e9;
+  border: 1px solid #dc00fa;
 }
 
 QMenuBar::item {
@@ -626,7 +626,7 @@ QScrollBar::handle:horizontal:hover {
 }
 
 QScrollBar::handle:horizontal:focus {
-  border: 1px solid #8ab6e9;
+  border: 1px solid #dc00fa;
 }
 
 QScrollBar::handle:vertical {
@@ -644,7 +644,7 @@ QScrollBar::handle:vertical:hover {
 }
 
 QScrollBar::handle:vertical:focus {
-  border: 1px solid #8ab6e9;
+  border: 1px solid #dc00fa;
 }
 
 QScrollBar::add-line:horizontal {
@@ -750,7 +750,7 @@ QTextEdit {
 }
 
 QTextEdit:focus {
-  border: 1px solid #8ab6e9;
+  border: 1px solid #dc00fa;
 }
 
 QTextEdit:selected {
@@ -769,7 +769,7 @@ QPlainTextEdit {
 }
 
 QPlainTextEdit:focus {
-  border: 1px solid #8ab6e9;
+  border: 1px solid #dc00fa;
 }
 
 QPlainTextEdit:selected {
@@ -879,6 +879,7 @@ QAbstractSpinBox {
   padding-left: 4px;
   padding-right: 4px;
   border-radius: 1.9px;
+  min-height: 1.5em;
   /* min-width: 5px; removed to fix 109 */
 }
 
@@ -1358,7 +1359,7 @@ QComboBox:hover {
 }
 
 QComboBox:focus {
-  border: 2px solid #8ab6e9;
+  border: 1px solid #dc00fa;
 }
 
 QComboBox:on {
@@ -1552,8 +1553,36 @@ background-color: white;
 }
 
 
+/* found inside Part Design Workbench and "make a draft on a face" Task panel options */
+QSint--ActionGroup QFrame[class="content"] QToolButton {
+  color: black;
+  text-align: center;
+  background-color: #d4d4d4;
+  border: 1px solid #adadad;
+  padding: 1px 1px; /* different than regular QPushButton */
+  margin: 0px; /* different than regular QPushButton */
+  min-height: 16px; /* same as QTabBar QPushButton min-width */
+  border-radius: 1px;
+}
 
+QSint--ActionGroup QFrame[class="content"] QToolButton:hover{
+    background: #8ab6e9;
+    border: 1px solid #8ab6e9;
+}
+QSint--ActionGroup QFrame[class="content"] QToolButton:focus {
+  border: 1px solid #dc00fa;
+}
 
+QSint--ActionGroup QFrame[class="content"] QToolButton:disabled,
+QSint--ActionGroup QFrame[class="content"] QToolButton:disabled:checked {
+    color: #455364;
+    background-color: #cccccc;
+}
+
+QSint--ActionGroup QFrame[class="content"] QToolButton:pressed {
+  background: #8ab6e9;
+  border: 1px solid #8ab6e9;
+}
 
 
 /* QSlider ----------------------------------------------------------------
@@ -1566,7 +1595,7 @@ QSlider:disabled {
 }
 
 QSlider:focus {
-  border: none;
+  border: 1px solid #dc00fa;
 }
 
 QSlider::groove:horizontal {
@@ -1606,7 +1635,7 @@ QSlider::sub-page:horizontal {
 }
 
 QSlider::sub-page:horizontal:disabled {
-  background: #8ab6e9;
+  background: #cccccc;
 }
 
 QSlider::handle:horizontal {
@@ -1624,7 +1653,7 @@ QSlider::handle:horizontal:hover {
 }
 
 QSlider::handle:horizontal:focus {
-  border: 1px solid #8ab6e9;
+  border: 1px solid #dc00fa;
 }
 
 QSlider::handle:vertical {
@@ -1642,7 +1671,7 @@ QSlider::handle:vertical:hover {
 }
 
 QSlider::handle:vertical:focus {
-  border: 1px solid #8ab6e9;
+  border: 1px solid #dc00fa;
 }
 
 /* QLineEdit --------------------------------------------------------------
@@ -1665,8 +1694,8 @@ QLineEdit {
 }
 
 QLineEdit:disabled {
-  background-color: #f6f6f6;
-  color: #c2c7cb;;
+  background-color: #cccccc;
+  color: #454545;;
 }
 
 QLineEdit:hover {
