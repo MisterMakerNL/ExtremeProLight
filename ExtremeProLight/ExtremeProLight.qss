@@ -301,12 +301,12 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qradiobutton
 
 --------------------------------------------------------------------------- */
 QRadioButton {
-  background-color: #f6f6f6;
+  background-color: transparent;
   color: black;
+  border: none;
   spacing: 4px;
   padding-top: 4px;
   padding-bottom: 4px;
-  border: none;
   outline: none;
 }
 
@@ -322,7 +322,7 @@ QRadioButton:disabled {
 }
 
 QRadioButton QWidget {
-  background-color: #f6f6f6;
+  background-color: transparent;
   color: black;
   spacing: 0px;
   padding: 0px;
@@ -331,43 +331,42 @@ QRadioButton QWidget {
 }
 
 QRadioButton::indicator {
-  border: none;
-  outline: none;
-  margin-left: 2px;
-  height: 14px;
-  width: 14px;
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  margin-left: 0px;
+  height: 11px;
+  width: 11px;
 }
 
 QRadioButton::indicator:unchecked {
 
 }
 
-QRadioButton::indicator:unchecked:hover, QRadioButton::indicator:unchecked:focus, QRadioButton::indicator:unchecked:pressed {
-  border: none;
-  outline: none;
+QRadioButton::indicator:unchecked:hover, QRadioButton::indicator:unchecked:pressed {
+  background-color: #8ab6e9;
+  border: 1px solid #8ab6e9;
+  border-radius: 6px;
 }
 
 QRadioButton::indicator:unchecked:disabled {
-  image:url(qss:images_dark-light/radiobutton_dark.svg);
+  /*image:url(qss:images_dark-light/radiobutton_dark.svg);*/
 }
 
 QRadioButton::indicator:checked {
-  background-color: black;
-  border: none;
-  outline: none;
   image:url(qss:images_dark-light/radiobutton_dark.svg);
 }
 
-QRadioButton::indicator:checked:hover, QRadioButton::indicator:checked:focus, QRadioButton::indicator:checked:pressed {
-  border: none;
-  outline: none;
+QRadioButton::indicator:checked:hover, QRadioButton::indicator:checked:pressed {
   background-color: #8ab6e9;
+  border: 1px solid #8ab6e9;
+  border-radius: 6px;
   image:url(qss:images_dark-light/radiobutton_dark.svg);
 }
 
 QRadioButton::indicator:checked:disabled {
   outline: none;
-  background-color: black;
+  background-color: #cccccc;
   image:url(qss:images_dark-light/radiobutton_dark.svg);
 }
 
@@ -2373,8 +2372,9 @@ https://stackoverflow.com/questions/14581498/qt-stylesheet-for-hline-vline-color
 --------------------------------------------------------------------------- */
 /* (dot) .QFrame  fix #141, #126, #123 */
 .QFrame {
-  border-radius: 1px;
-  border: 1px solid #cccccc;
+  border-radius: 0px;
+  border: 0px solid #cccccc;
+  background-color: #cccccc;
   /* No frame */
   /* HLine */
   /* HLine */
