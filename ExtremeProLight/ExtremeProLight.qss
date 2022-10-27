@@ -197,7 +197,7 @@ QCheckBox::indicator {
 }
 
 QCheckBox::indicator:unchecked {
-  image: url(qss:images_dark-light/images_dark-light/checkbox_light.svg);
+  image: url(qss:images_dark-light/images_dark-light/checkbox_dark.svg);
 }
 
 QCheckBox::indicator:unchecked:hover, QCheckBox::indicator:unchecked:focus, QCheckBox::indicator:unchecked:pressed {
@@ -210,7 +210,7 @@ QCheckBox::indicator:unchecked:disabled {
 QCheckBox::indicator:checked {
   background-color: #8ab6e9; /* QRadioButton has the same color */
   border: 1px solid #cccccc; /* QRadioButton has the same color */
-  image:url(qss:images_dark-light/checkbox_light.svg);
+  image:url(qss:images_dark-light/checkbox_dark.svg);
 }
 
 QCheckBox::indicator:checked:hover, QCheckBox::indicator:checked:focus, QCheckBox::indicator:checked:pressed {
@@ -284,7 +284,7 @@ QGroupBox::indicator:unchecked:disabled {
 
 QGroupBox::indicator:checked {
   border: none;
-  image:url(qss:images_dark-light/checkbox_light.svg);
+  image:url(qss:images_dark-light/checkbox_dark.svg);
 }
 
 QGroupBox::indicator:checked:hover, QGroupBox::indicator:checked:focus, QGroupBox::indicator:checked:pressed {
@@ -482,16 +482,16 @@ QMenu::indicator:non-exclusive:unchecked:disabled {
 }
 
 QMenu::indicator:non-exclusive:checked {
-  image:url(qss:images_dark-light/checkbox_light.svg);
+  image:url(qss:images_dark-light/checkbox_dark.svg);
 }
 
 QMenu::indicator:non-exclusive:checked:hover, QMenu::indicator:non-exclusive:checked:focus, QMenu::indicator:non-exclusive:checked:pressed {
   border: none;
-  image:url(qss:images_dark-light/checkbox_light.svg);
+  image:url(qss:images_dark-light/checkbox_dark.svg);
 }
 
 QMenu::indicator:non-exclusive:checked:disabled {
-  image:url(qss:images_dark-light/checkbox_light.svg);
+  image:url(qss:images_dark-light/checkbox_dark.svg);
 }
 
 QMenu::indicator:non-exclusive:indeterminate {
@@ -2084,7 +2084,7 @@ QTreeView::indicator:checked,
 QListView::indicator:checked,
 QTableView::indicator:checked,
 QColumnView::indicator:checked {
-  image: url(qss:images_dark-light/checkbox_light.svg);
+  image: url(qss:images_dark-light/checkbox_dark.svg);
 }
 
 QTreeView::indicator:checked:hover, QTreeView::indicator:checked:focus, QTreeView::indicator:checked:pressed,
@@ -2097,7 +2097,7 @@ QTableView::indicator:checked:pressed,
 QColumnView::indicator:checked:hover,
 QColumnView::indicator:checked:focus,
 QColumnView::indicator:checked:pressed {
-  image: url(qss:images_dark-light/checkbox_light.svg);
+  image: url(qss:images_dark-light/checkbox_dark.svg);
 }
 
 QTreeView::indicator:unchecked,
