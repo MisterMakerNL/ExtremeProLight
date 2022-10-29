@@ -954,13 +954,13 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qframe
 QLabel {
   background-color: transparent;
   border: 0px solid #cccccc;
-  padding: 2px;
+  padding: 0px;
   margin: 0px;
   color: black;
 }
 
 QLabel:disabled {
-  background-color: #f6f6f6;
+  background-color: transparent;
   border: 0px solid #cccccc;
   color: #9f0d00;;
 }
@@ -1737,7 +1737,7 @@ QTabWidget::pane {
 
 QTabWidget::pane:selected {
   background-color: #8ab6e9;
-  border: 1px solid #346792;
+  border: 0px solid #346792;
 }
 
 /* QTabBar ----------------------------------------------------------------
@@ -2314,25 +2314,29 @@ QHeaderView::up-arrow {
 /* QToolBox --------------------------------------------------------------
 
 https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtoolbox
+used in PATH
 
 --------------------------------------------------------------------------- */
 QToolBox {
   padding: 0px;
-  border: 0px;
-  border: 1px solid #33ff00;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  background-color: transparent;
 }
 
 QToolBox:selected {
   padding: 0px;
-  border: 2px solid #346792;
+  border: 0px solid #346792;
+  background-color: transparent;
 }
 
 QToolBox::tab {
-  background-color: #f6f6f6;
-  border: 1px solid #cccccc;
+  background-color: #d4d4d4;
+  border: 0px solid #cccccc;
   color: black;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  background-image: url(qss:images_dark-light/down_arrow_darker.svg);
+  background-repeat: none;
+  background-position: center center;
 }
 
 QToolBox::tab:disabled {
@@ -2340,18 +2344,19 @@ QToolBox::tab:disabled {
 }
 
 QToolBox::tab:selected {
-  background-color: #f5f5f5;
-  border-bottom: 2px solid #8ab6e9;
+  background-color: #d4d4d4;
+  background-image: url(qss:images_dark-light/transparent.svg);
+  background-repeat: none;
 }
 
 QToolBox::tab:selected:disabled {
-  background-color: #f5f5f5;
-  border-bottom: 2px solid #cccccc;
+  background-color: #d4d4d4;
+  border-bottom: 0px solid #cccccc;
+  color: #515151;
 }
 
 QToolBox::tab:!selected {
-  background-color: #f5f5f5;
-  border-bottom: 2px solid #f5f5f5;
+
 }
 
 QToolBox::tab:!selected:disabled {
@@ -2359,14 +2364,13 @@ QToolBox::tab:!selected:disabled {
 }
 
 QToolBox::tab:hover {
-  /*border-color: #8ab6e9;*/
-  border-bottom: 2px solid #8ab6e9;
-}
-
+  background-color: #8ab6e9;
+  }
+/*
 QToolBox QScrollArea QWidget QWidget {
   padding: 0px;
   border: 0px;
-  background-color: #f6f6f6;
+  background-color: transparent;
 }
 
 /* QFrame -----------------------------------------------------------------
