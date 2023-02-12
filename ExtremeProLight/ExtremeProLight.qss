@@ -459,8 +459,9 @@ QMenu::icon {
 }
 
 QMenu::indicator {
-  width: 14px;
-  height: 14px;
+  padding: 2px;
+  width: 12px;
+  height: 12px;
   /* non-exclusive indicator = check box style indicator (see QActionGroup::setExclusive) */
   /* exclusive indicator = radio button style indicator (see QActionGroup::setExclusive) */
 }
