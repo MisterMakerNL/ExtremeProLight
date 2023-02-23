@@ -249,7 +249,7 @@ QGroupBox {
   border: 1px solid #cccccc;
   border-radius: 1.9px;
   padding: 2px;
-  margin-top: 6px;
+  margin-top: 10px;
   margin-bottom: 4px;
 }
 
@@ -259,7 +259,7 @@ QGroupBox::title {
   left: 4px;
   padding-left: 2px;
   padding-right: 4px;
-  padding-top: 0px;
+  padding-top: 6px;
 }
 
 QGroupBox::indicator {
