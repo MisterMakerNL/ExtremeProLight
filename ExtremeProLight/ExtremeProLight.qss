@@ -80,9 +80,10 @@ QWidget::item:selected {
   background-color: #8ab6e9;
 }
 
-QWidget::item:hover:!selected {
-  background-color: #8ab6e9;
-}
+  /* Causes issue with colorselector.
+  QWidget::item:hover:!selected {
+    background-color: #8ab6e9;
+  }*/
 
 /* QMainWindow ------------------------------------------------------------
 
@@ -90,30 +91,37 @@ This adjusts the splitter in the dock widget, not qsplitter
 https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qmainwindow
 
 --------------------------------------------------------------------------- */
+
 QMainWindow::separator {
-  background-color: #f5f5f5;
-  border: 0px solid #cccccc;
-  spacing: 1px;
+  /*background-color: #3c3c3c;*/
+  spacing: 0px;
   padding: 1px;
 }
 
-QMainWindow::separator:hover {
-  background-color: #8ab6e9;
-  border: 0px solid #8ab6e9;
+QMainWindow::separator:vertical:hover {
+  background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0.2 transparent,stop:0.5 #8ab6e9, stop:0.8 transparent);
+  /*background-color: #557bb6;*/
+  image: url(qss:images_dark-light/splitter_vertical_dark.svg);
 }
 
-QMainWindow::separator:horizontal {
-  width: 7px;
-  margin-top: 0.2px;
-  margin-bottom: 0.2px;
+QMainWindow::separator:horizontal:hover {
+  background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,stop:0.2 transparent,stop:0.5 #8ab6e9, stop:0.8 transparent);
+  /*background-color: #557bb6;*/
   image: url(qss:images_dark-light/splitter_horizontal_dark.svg);
 }
 
+QMainWindow::separator:horizontal {
+  width: 4px;
+  margin-top: 0.1px;
+  margin-bottom: 0.1px;
+ /* image: url(qss:images_dark-light/splitter_horizontal_dark.svg);*/
+}
+
 QMainWindow::separator:vertical {
-  height: 7px;
-  margin-left: 0.2px;
-  margin-right: 0.2px;
-  image: url(qss:images_dark-light/splitter_vertical_dark.svg);
+  height: 4px;
+  margin-left: 0.1px;
+  margin-right: 0.1px;
+ /* image: url(qss:images_dark-light/splitter_vertical_dark.svg);*/
 }
 
 /* QToolTip ---------------------------------------------------------------
@@ -1765,8 +1773,8 @@ QTabBar::close-button, QDockWidget QTabBar::close-button {
 }
 
 QTabBar::close-button:hover, QDockWidget QTabBar::close-button:hover {
-  image: url(qss:images_dark-light/close_dark.svg);
-  background-color: rgba(255, 0, 0, 0.392);
+  image: url(qss:images_dark-light/close_red.svg);
+  /*background-color: rgba(255, 0, 0, 0.3);*/
 }
 
 QTabBar::close-button:pressed, QDockWidget QTabBar::close-button:pressed {
@@ -2042,10 +2050,9 @@ QDockWidget::float-button {
 }
 
 QDockWidget::float-button:hover {
-  background-color: #8ab6e9;
-  image: url(qss:images_dark-light/undock_dark.svg);
+  /*background-color: #8ab6e9;*/
+  image: url(qss:images_dark-light/undock_blue.svg);
 }
-
 QDockWidget::float-button:pressed {
   image: url(qss:images_dark-light/undock_dark.svg);
 }
